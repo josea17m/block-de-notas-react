@@ -1,0 +1,512 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --color-dark: #2a292d;
+  --color-light: #dfe0e1;
+  --color-GG: #aaa6a3;
+}
+
+.title {
+  width: 100%;
+
+  text-align: center;
+
+  font-size: 1.5rem;
+}
+
+/* MODAL */
+
+.modal {
+  width: 80vw;
+  height: 80vh;
+
+  position: absolute;
+  top: 10%;
+  left: 10%;
+
+  padding: 5%;
+
+  flex-direction: column;
+
+  border-radius: 15px;
+
+  color: white;
+  background-color: #2a292d;
+  box-shadow: 0px 0px 300px 300px rgba(0, 0, 0, 0.5);
+
+  transition: all 300ms;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-bottom{
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-nota {
+  width: 100%;
+  height: 100%;
+
+  white-space: break-spaces;
+
+  outline: none;
+}
+
+.modal-etiqueta {
+  width: 100%;
+  height: 10%;
+
+  outline: none;
+}
+
+.modal-etiqueta-span {
+  padding: 2%;
+
+  border-radius: 15px;
+}
+
+.modal-etiqueta-input {
+  padding: 1%;
+  margin: 1%;
+
+  border: none;
+
+  color: white;
+  outline: none;
+
+  transition: all 300ms;
+}
+
+.eliminar {
+  cursor: pointer;
+
+  transition: all 300ms;
+}
+
+.cerrar {
+  position: absolute;
+  top: -90px;
+  right: -130px;
+}
+
+.button-close {
+  cursor: pointer;
+}
+
+.dark-etiqueta {
+  background-color: #dfe0e1;
+  color: black;
+}
+
+.light-etiqueta {
+  background-color: #2a292d;
+  color: white;
+}
+
+.dark-etiqueta-eliminar {
+  background-color: #dfe0e1;
+  color: black;
+}
+
+.light-etiqueta-eliminar {
+  background-color: #2a292d;
+  color: white;
+}
+
+.dark-etiqueta-eliminar:hover {
+  background-color: rgb(255, 34, 34);
+  color: white;
+}
+
+.light-etiqueta-eliminar:hover {
+  background-color: rgb(255, 34, 34);
+}
+
+.dark-etiqueta:hover {
+  background-color: #b1b1b1;
+}
+
+.light-etiqueta:hover {
+  background-color: #565558;
+}
+
+.dark {
+  background-color: #2a292d;
+}
+
+.light {
+  background-color: #dfe0e1;
+}
+
+/* .button-light:hover {
+  background-color: #565558;
+  color: white;
+}
+
+.button-dark:hover {
+  background-color: #cccccc;
+  color: black;
+} */
+
+.dark-color {
+  color: white;
+}
+
+.light-color {
+  color: black;
+}
+
+.css-1lwtqax {
+  padding: 0 auto;
+
+  position: absolute;
+  bottom: 10%;
+}
+
+.border-dark {
+  border: 1px solid #dfe0e1 !important;
+}
+
+.border-light {
+  border: 1px solid #2a292d !important;
+}
+
+.button-dark-mode {
+  position: absolute;
+  bottom: 100%;
+}
+
+/* MAIN CONTAINER */
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+
+  transition: all 300ms;
+}
+
+/* NOTES */
+
+.notes-container {
+  width: 80%;
+
+  padding: 1%;
+  padding-left: 15%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+
+  transition: all 300ms;
+}
+
+.vh-100 {
+  height: 100vh;
+}
+
+.percent-100 {
+  height: 100%;
+}
+
+.notes {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+
+  padding: 2%;
+  margin-top: 2%;
+
+  transition: all 300ms;
+}
+
+.nota-vacia {
+  color: #8d8a89;
+}
+
+.notes div {
+  width: 12rem;
+  height: 13rem;
+
+  padding: 6%;
+
+  border: 1px solid #dfe0e1;
+  border-radius: 10px;
+
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  transition: all 300ms;
+}
+
+.notes div:hover{
+  scale: 1.04;
+}
+
+.p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: break-spaces;
+}
+
+.note-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 2%;
+}
+/* INPUT NOTES */
+
+.form {
+  width: 80%;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid white;
+  border-radius: 10px;
+
+  transition: all 300ms;
+}
+
+.textarea {
+  width: 100%;
+  height: 5rem;
+
+  overflow: hidden;
+
+  padding: 3%;
+
+  border: none;
+  border-radius: 10px;
+
+  outline: none;
+
+  transition: all 300ms;
+}
+
+.placeholder {
+  position: absolute;
+  top: 3%;
+
+  width: 15%;
+
+  padding: 1%;
+
+  border: none;
+  outline: none;
+  background-color: #dfe0e1;
+}
+
+.button-etiqueta {
+  cursor: pointer;
+}
+
+.button {
+  width: 20%;
+
+  padding: 1.3%;
+  margin: 5%;
+
+  border: none;
+  border-radius: 10px;
+
+  outline: none;
+
+  transition: all 300ms;
+}
+
+/* .save-button:hover {
+  background-color: var(--color-dark);
+  color: white;
+} */
+
+.save-button {
+  cursor: pointer;
+}
+
+.etiqueta {
+  position: relative;
+  top: 70%;
+  left: 0%;
+
+  font-size: 10px;
+
+  margin: 2%;
+  padding: 5%;
+
+  border: 1px solid white;
+  border-radius: 15px;
+
+  transition: all 300ms;
+}
+
+/*  NAVBAR */
+
+.navbar-container {
+  height: 100vh;
+  width: 15%;
+
+  padding: 2%;
+
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  overflow: hidden;
+
+  transition: all 300ms;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.etiqueta-title {
+  padding: 6%;
+
+  border-radius: 10px;
+
+  transition: all 400ms;
+}
+
+.etiqueta-item {
+  padding: 6%;
+
+  text-align: left;
+
+  border: none;
+  border-radius: 10px;
+
+  outline: none;
+
+  transition: all 400ms;
+}
+
+.e {
+  cursor: pointer;
+}
+
+.e:hover {
+  background-color: var(--color-light);
+}
+
+@media (max-width: 375px) {
+  .notes-container {
+    width: 100%;
+  }
+
+  .buttons-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .notes div {
+    width: 100%;
+  }
+
+  .etiqueta-title {
+    font-size: 0.8rem;
+  }
+
+  .etiqueta-item {
+    font-size: 0.8rem;
+  }
+
+  .textarea {
+    font-size: 0.8rem;
+  }
+
+  .button-close {
+    top: -40px;
+    right: 0;
+  }
+
+  .save-button:hover {
+    background-color: #dfe0e1;
+    color: black;
+  }
+
+  .button {
+    width: 40%;
+    font-size: 0.7rem;
+  }
+
+  .navbar-container {
+    padding: 1%;
+
+    border: none;
+    border-radius: 0px;
+  }
+
+  .main-container {
+    width: 100vw;
+  }
+  .notes {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .main-container {
+    width: 100vw;
+  }
+
+  .notes-container {
+    width: 100%;
+  }
+
+  .navbar-container {
+    padding: 1%;
+
+    border: none;
+    border-radius: 0px;
+  }
+
+  .notes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .notes div {
+    width: 100%;
+  }
+}
+
+@media (min-width: 900px) {
+  .notes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .notes {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
